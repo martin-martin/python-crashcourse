@@ -1,5 +1,4 @@
 with open('recipe.txt', 'r') as fin:
-    #recipe = fin.read()
     recipe = fin.readlines()
 
 print(recipe)
@@ -12,6 +11,7 @@ print(recipe)
 
 
 # buff up the recipe for family time!
+# don't worry about this part yet!
 family_recipe = ["10" + line[1:] for line in recipe]
 print(family_recipe)
 
