@@ -1,0 +1,21 @@
+body {
+    color: #ffffff;
+    background-color: rgba(233,102,3,0.1);
+    /*background-image: url("work_at_beach.jpeg");*/
+}
+
+section {
+
+}
+
+.highlight {
+    color: limegreen;
+}
+
+p {
+    color: lime;
+}
+
+img {
+    width: 500px;
+}
