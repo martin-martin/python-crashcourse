@@ -1,0 +1,419 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang='i_default'>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <title>My Freecycle Network</title>
+  <link href="//static.freecycle.org/images/favicon.png" rel="icon" />
+  <link href="//static.freecycle.org/images/favicon.png" rel="shortcut icon" />
+  <link rel='stylesheet' type='text/css' href='//static.freecycle.org/css/freecycle.css' />
+  <script type='text/javascript' src='//static.freecycle.org/js/freecycle.js'></script>      <!-- Prebid Custom Config Section START -->
+  <!-- Make sure this is inserted before your GPT tag -->
+  <script> 
+    var PREBID_TIMEOUT = 1200;
+
+    // Add more bidders like Oath, etc later...
+    var adUnits =  [{
+		"code": "div-gpt-ad-8054601-1",
+		"bids": [
+		   {
+			"bidder": "openx",
+			"params": {
+                		"unit": "539508013",
+                		"delDomain":  "freecycle-d.openx.net"
+          		}
+		   },
+		   {
+			"bidder": "onedisplay",
+			"params": {
+                		"placement": "4741552",
+                		"network":  "11209.1"
+          		}
+		   },
+		   {
+			"bidder": "sovrn",
+			"params": {
+				"tagid": 533972
+			}
+		   }
+		],
+		"sizes": [
+			[300, 250]
+		]
+	}, {
+		"code": "div-gpt-ad-8054602-1",
+		"bids": [
+		   {
+			"bidder": "openx",
+			"params": {
+                		"unit": "539508016",
+                		"delDomain":  "freecycle-d.openx.net"
+          		}
+		   },
+		   {
+			"bidder": "onedisplay",
+			"params": {
+                		"placement": "4741554",
+                		"network":  "11209.1"
+          		}
+		   },
+		   {
+			"bidder": "sovrn",
+			"params": {
+				"tagid": 533973
+			}
+		   }
+		],
+		"sizes": [
+			[300, 250]
+		]
+	}, {
+		"code": "div-gpt-ad-8054603-1",
+		"bids": [
+		   {
+			"bidder": "openx",
+			"params": {
+                		"unit": "539508017",
+                		"delDomain":  "freecycle-d.openx.net"
+          		}
+		   },
+		   {
+			"bidder": "onedisplay",
+			"params": {
+                		"placement": "4741553",
+                		"network":  "11209.1"
+          		}
+		   },
+		   {
+			"bidder": "sovrn",
+			"params": {
+				"tagid": 533974
+			}
+		   }
+		],
+		"sizes": [
+			[160, 600]
+		]
+	}
+    ];
+
+    console.log("prebid configured.");
+    var pbjs = pbjs || {};
+    pbjs.que = pbjs.que || [];
+
+  </script>
+  <!-- Prebid Config Section END -->
+  
+  <!-- Prebid Boilerplate Section START. No Need to Edit. -->
+  <script type="text/javascript" src="//static.freecycle.org/js/prebid_tfn.js" async></script>
+  <script>
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    googletag.cmd.push(function() {
+        googletag.pubads().disableInitialLoad();
+    });
+
+    pbjs.que.push(function() {
+        pbjs.addAdUnits(adUnits);
+	pbjs.enableSendAllBids();
+	pbjs.enableAnalytics([
+	   {
+        	provider: 'ga',
+        	options: {
+            		enableDistribution: false
+        	}
+    	   }, 
+	   {
+        	provider: 'pubwise',
+        	options: {
+            		site: 'd86b34cf-c25f-4163-a19a-4184064fc1fe',
+            		endpoint:'https://api.pubwise.io/api/v4/event/add/'
+            	}
+           } 
+	]);
+        pbjs.requestBids({
+            bidsBackHandler: sendAdserverRequest
+        });
+    });
+
+    function sendAdserverRequest() {
+        if (pbjs.adserverRequestSent) return;
+        pbjs.adserverRequestSent = true;
+        googletag.cmd.push(function() {
+            pbjs.que.push(function() {
+                pbjs.setTargetingForGPTAsync();
+                googletag.pubads().refresh();
+            });
+        });
+    }
+
+    setTimeout(function() {
+        sendAdserverRequest();
+    }, PREBID_TIMEOUT);
+
+  </script>
+  <!-- Prebid Boilerplate Section END -->
+
+  <script>
+    (function () {
+        var gads = document.createElement('script');
+        gads.async = true;
+        gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') +
+                '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+    })();
+  </script>
+
+  <script>
+//***************  define our actual TFN ad slots.
+googletag.cmd.push(function() {
+	googletag.defineSlot('/1053204/newBottomLeft', [
+		[300, 250]
+	], 'div-gpt-ad-8054601-1').addService(googletag.pubads());
+	googletag.defineSlot('/1053204/newBottomRight', [
+		[300, 250]
+	], 'div-gpt-ad-8054602-1').addService(googletag.pubads());
+	googletag.defineSlot('/1053204/newRightTower', [
+		[160, 600]
+	], 'div-gpt-ad-8054603-1').addService(googletag.pubads());
+
+	googletag.pubads().enableSingleRequest();
+	googletag.enableServices()
+});
+  </script>
+
+<!-- Sovrn OneTag code. outside of DFP and header bidding... -->
+<script src="//get.s-onetag.com/31b96d5d-a076-42df-a1ab-156f616f8bfe/tag.min.js" async defer></script>
+      <div id="fb-root"></div>
+<script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/i_default/sdk.js#xfbml=1&version=v2.0";
+          fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+ </script>
+
+  </head>
+
+<body>  <nav id="skip_nav_menu"><a href='#content'>Skip navigation menu</a><hr></nav>
+
+<nav id="main_menu"> <a href='https://www.freecycle.org'  class='menu_header ' title="Home">Home</a> <a href='https://www.freecycle.org/browse/'  class='menu_header ' title="Browse Groups">Browse Groups</a> <a href='http://faq.freecycle.org/' id='mmenu_faq'  class='menu_header ' title="FAQ">FAQ</a> <a href='https://www.freecycle.org/about/' id='mmenu_about'  class='menu_header ' title="About Freecycle&trade;">About Freecycle&trade;</a> <a href='https://www.freecycle.org/donate'  class='menu_header menu_header_2' title="Donate">Donate</a> <a href='http://store.freecycle.org/'  class='menu_header menu_header_2' title="Store">Store</a> <a href='https://www.freecycle.org/about/sponsors'  class='menu_header menu_header_2' title="Sponsors">Sponsors</a>  <a href='http://my.freecycle.org/logout' id='mmenu_logout'  class='menu_header ' title="Log out">Log out</a> <a href='http://my.freecycle.org/home/groups' id='mmenu_groups'  class='menu_header ' title="My Groups">My Groups</a> <a href='http://my.freecycle.org/home' id='mmenu_myf'  class='menu_header ' title="My Freecycle">My Freecycle</a>   </nav>
+<nav id='dyn_myf'>
+  <a href='http://my.freecycle.org/home/info' class='menu_item' title="My Info">My Info</a>
+  <a href='http://my.freecycle.org/home/groups' class='menu_item' title="My Groups">My Groups</a>
+  <a href='http://my.freecycle.org/home/posts' class='menu_item' title="My Posts">My Posts</a>
+</nav>
+<nav id='dyn_about'>
+  <a href="http://newswire.freecycle.org" class='menu_item' title="Newswire">Newswire</a>
+  <a href="//www.freecycle.org/about/background" class='menu_item' title="History">History</a>
+  <a href="//www.freecycle.org/about/video" class='menu_item' title="Instructional Video">Instructional Video</a>
+  <a href="//www.freecycle.org/about/promovideo" class='menu_item' title="Promo Video - Lamp">Promo Video - Lamp</a>
+  <a href="//www.freecycle.org/about/missionstatement" class='menu_item' title="Mission Statement">Mission Statement</a>
+  <a href="//www.freecycle.org/about/pressroom" class='menu_item' title="Press Room">Press Room</a>
+  <a href="//www.freecycle.org/about/sponsors" class='menu_item' title="Sponsors">Sponsors</a>
+  <a href="//www.freecycle.org/about/funds" class='menu_item' title="Sources and Use of Funds">Sources and Use of Funds</a>
+  <a href="//www.freecycle.org/about/volunteering" class='menu_item' title="Volunteering">Volunteering</a>
+  <a href="http://wiki.freecycle.org/Leadership" class='menu_item' title="Leadership">Leadership</a>
+  <a href="//www.freecycle.org/about/board" class='menu_item' title="Board">Board</a>
+  <a href="//www.freecycle.org/about/privacy" class='menu_item' title="Privacy">Privacy</a>
+  <a href="//www.freecycle.org/tos" class='menu_item' title="Terms of Service">Terms of Service</a>
+  <a href="//www.freecycle.org/about/disclaimer" class='menu_item' title="Disclaimer">Disclaimer</a>
+  <a href="//www.freecycle.org/about/links" class='menu_item' title="Links we like">Links we like</a>
+</nav>
+<nav id='dyn_faq'>
+ <a href="http://wiki.freecycle.org/MemberFAQ" class="menu_item" title="Member FAQ">Member FAQ</a>
+ <a href="http://wiki.freecycle.org/Moderator_Manual:Main_Page" class="menu_item" title="Moderator Manual">Moderator Manual</a>
+</nav>   <!-- only show this stuff if you're logged in -->  <style>
+#blocker_message {
+       
+        border: 2px solid black;
+        border-radius: 10px;
+        display: none;
+        align-self: center;
+        text-align: center;
+	font-size: .8em;
+        margin-top: 5px;
+        padding: 5px 80px 5px 80px;
+        background-color: #eee;
+}
+</style>
+<div id="blocker_message">Please consider turning off your ad-blocking software for this site, and/or making a <a href="//www.freecycle.org/donate">donation</a>. As a charitable nonprofit we rely on this income to keep this site running. <br>Big thank-you hug!</div>  <!-- fundraiser box goes here if we're doing it -->        <div style='text-align:center; font-size: 0.75em; margin-top: 24px'>
+  <a href='/'><img src="//static.freecycle.org/images/myfreecycle_logo.jpg" alt="The Freecycle Network logo" width='462' height='107' /></a><br />
+</div>
+<div id='myf_box'> <div id="contentbox_tab_bar"><div id="corset"> <div class="tabbar_tab orange_tab "><a href='' title='Group Info'>Group Info</a></div><div class="tabbar_tab green_tab  tabbar_tab_on"><a href='http://my.freecycle.org/home/posts' title='My Posts'>My Posts</a></div><div class="tabbar_tab green_tab  tabbar_tab_on"><a href='http://my.freecycle.org/home/groups' title='My Groups'>My Groups</a></div><div class="tabbar_tab green_tab  tabbar_tab_on"><a href='http://my.freecycle.org/home/info' title='My Info'>My Info</a></div> </div></div>    
+ <div id='boxmain'>
+  <div id='content'>
+<h2>Find other groups</h2>
+<form method='post' action='/home/groups/search' id='findgroupform' class='cols_2'><fieldset>
+  <label for='groupname'>  Find a group near you : <br />
+    <span class='note'> (e.g. <b>Tucson, Arizona</b> or <b>"milton keynes"</b>) </span>
+  </label>
+  <input type='text' name='groupname' id='groupname' value='' />
+  <input type='submit' value=' Find group ' class='button defaultButton' />
+</fieldset></form>
+
+
+
+     <p class='header'> You are a member of 2 group(s). </p>
+<table>  <tr class='candy2' style='border-top:2px solid gray'>
+  <td style='width:100%; padding: 2px;'>
+
+  <h2>
+    <a href='//groups.freecycle.org/DenverCO'>Denver</a>  </h2>
+
+  <p style='text-align: center'> There are 2 ADMIN message(s) for this Group - please make sure you've read them </p>  <div class='groupinfo'>
+  <table class='group_data'>
+    <tr>
+      <td>Membership level: </td>
+      <td> Member </td>
+    </tr><tr>
+      <td>Joined/Applied: </td>
+      <td>03/13/19</td>
+    </tr>  <tr>
+      <td>Email preference: </td>
+      <td> A digest of 25 Posts </tr>
+
+  </table>
+</div>   <div class='groupoptions'>
+<div style='width:49%; float:left'> 
+<div class='myf_button'>
+  <a href='https://my.freecycle.org/home/posts/DenverCO/post_to_group' title="Post to this Group" >Post to this Group</a>
+</div>
+
+<div class='myf_button'>
+  <a href='http://groups.freecycle.org/DenverCO' title="View the Posts" >View the Posts</a>
+</div>
+
+<div class='myf_button'>
+  <a href='https://groups.freecycle.org/DenverCO/contact_moderators' title="Contact the ModTeam" >Contact the ModTeam</a>
+</div>
+ </div>
+<div style='width:49%; float: right'> 
+<div class='myf_button'>
+  <a href='https://my.freecycle.org/home/groups/DenverCO/options' title="Change settings" >Change settings</a>
+</div>
+
+<div class='myf_button'>
+  <a href='https://my.freecycle.org/home/groups/DenverCO/set_home_group' title="Set as 'home' group" >Set as 'home' group</a>
+</div>
+ </div>
+</div>  </td>
+</tr>  <tr class='candy1' style='border-top:2px solid gray'>
+  <td style='width:100%; padding: 2px;'>
+
+  <h2>
+    <a href='//groups.freecycle.org/SanFrancisco'>San Francisco</a>  </h2>
+
+  <p style='text-align: center'> There are 2 ADMIN message(s) for this Group - please make sure you've read them </p>  <div class='groupinfo'>
+  <table class='group_data'>
+    <tr>
+      <td>Membership level: </td>
+      <td> Member </td>
+    </tr><tr>
+      <td>Joined/Applied: </td>
+      <td>03/13/19</td>
+    </tr>  <tr>
+      <td>Email preference: </td>
+      <td> A digest of 25 Posts </tr>
+
+  </table>
+</div>   <div class='groupoptions'>
+<div style='width:49%; float:left'> 
+<div class='myf_button'>
+  <a href='https://my.freecycle.org/home/posts/SanFrancisco/post_to_group' title="Post to this Group" >Post to this Group</a>
+</div>
+
+<div class='myf_button'>
+  <a href='http://groups.freecycle.org/SanFrancisco' title="View the Posts" >View the Posts</a>
+</div>
+
+<div class='myf_button'>
+  <a href='https://groups.freecycle.org/SanFrancisco/contact_moderators' title="Contact the ModTeam" >Contact the ModTeam</a>
+</div>
+ </div>
+<div style='width:49%; float: right'> 
+<div class='myf_button'>
+  <a href='https://my.freecycle.org/home/groups/SanFrancisco/options' title="Change settings" >Change settings</a>
+</div>
+
+<div class='myf_button'>
+  <a href='https://my.freecycle.org/home/groups/SanFrancisco/set_home_group' title="Set as 'home' group" >Set as 'home' group</a>
+</div>
+ </div>
+</div>  </td>
+</tr>  </table> </div>
+</div>
+<div id='boxbottom'></div>
+</div>
+
+<div id='adblock'> <script type='text/javascript'>
+GA_googleFillSlot("MyF_footer_left");
+</script>
+<!-- MyF_footer_right -->
+<script type='text/javascript'>
+GA_googleFillSlot("MyF_footer_right");
+</script>
+ </div>
+<br> <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-12614335-1', 'auto');
+  ga('set', 'allowAdFeatures', false);
+ ga('set', 'userId', 28724186); // Set the user ID using signed-in user_id.
+ ga('send', 'pageview');
+
+</script>
+
+ <div class="center" style="top:10px; position: relative;"> <section id='social_media_buttons'>
+    <div style='margin:0px important!;padding:0px;">
+
+ <script src="https://apis.google.com/js/platform.js" async defer>
+  {lang: 'i_default' }
+</script>
+
+<div class="g-follow" data-annotation="bubble" data-height="20" data-href="https://plus.google.com/105329491294406874354" data-rel="publisher"></div>
+
+ <a style="top:-1px;" href="https://twitter.com/freecycle" class="twitter-follow-button" data-show-count="false">Follow @freecycle</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+ <div style='display:inline-block; top:-2px;' class="fb-like" data-href="https://www.facebook.com/freecycle" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+    </div>
+</section>
+ </div>
+<div class="center note" style="top:10px; position: relative;"> If you have any problems or feedback when using My Freecycle, please refer to the <a href="http://wiki.freecycle.org/MemberFAQ:/"> Member FAQ page</a>. For specific queries about groups, please contact your local group moderator whose contact info is noted at the top of each local group "All Items" page. For concerns regarding your data protection, please click <a href="https://wiki.freecycle.org/Privacy"> here</a>.
+</div>
+<br>  <div style="display:block;width:650px;margin-left:auto;margin-right:auto; margin-top:0em; top:-1em;">
+
+ <div style="margin:10px;margin-top:0px;background-color:white;float:left;">
+    <!-- /1053204/newBottomLeft -->
+    <div id='div-gpt-ad-8054601-1' style='height:250px; width:300px;'>
+        <script type='text/javascript'>
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-8054601-1'); });
+        </script>
+    </div>
+
+ </div>
+ <div style="margin:10px;margin-top:0px;background-color:white;float:left;">
+    <!-- /1053204/newBottomRight -->
+   <div id='div-gpt-ad-8054602-1' style='height:250px; width:300px;'>
+        <script type='text/javascript'>
+            googletag.cmd.push(function() { googletag.display('div-gpt-ad-8054602-1'); });
+        </script>
+    </div>
+ </div>
+</div>  <!-- end of whole bottom of page ad splacement -->
+
+    <br>
+<footer id='main_footer'> Copyright &copy; 2019 The Freecycle Network (http://www.freecycle.org). All rights reserved. Freecycle and the Freecycle logo are trademarks of The Freecycle Network in various countries. </footer>
+</body>
+</html>
+
+
+
+              
