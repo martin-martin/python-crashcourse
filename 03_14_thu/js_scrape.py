@@ -6,5 +6,6 @@ session = HTMLSession()
 r = session.get(url)
 r.html.render()  # parses JavaScript!
 
+print(r.html.text)
 for link in r.html.absolute_links:
     print(link)
