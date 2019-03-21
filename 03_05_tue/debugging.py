@@ -1,4 +1,4 @@
-my_list = [1, 2, 3, 5, 42]
+my_list = [1, 22, 3, 5, 42]
 
 new_list = []
 for x in my_list:
